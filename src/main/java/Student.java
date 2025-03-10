@@ -34,18 +34,16 @@ public class Student implements Comparable<Student> {
         }
     }
 
-//    public static void removeStudent(long phoneNumber) {
-//        Iterator<Student> iteratorStudents = listStudents.iterator();
-//        if (iteratorStudents.hasNext()) {
-//            Student currentStudent = iteratorStudents.next();
-//            System.out.println("номер " + currentStudent.getPhoneNumber() +
-//                    " номер для удаления " + phoneNumber);
-//            if (currentStudent.getPhoneNumber() == phoneNumber) {
-//                System.out.println(currentStudent + " remove!");
-//                iteratorStudents.remove();
-//            }
-//        }
-//    }
+    public static void removeStudent(long phoneNumber) {
+        Iterator<Student> studentIterator = listStudents.iterator();
+        while (studentIterator.hasNext()) {
+            Student currentStudent = studentIterator.next();
+            if (currentStudent.getPhoneNumber() == phoneNumber) {
+                System.out.println("Студент " + currentStudent + " удалён!");
+                studentIterator.remove();
+            }
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
