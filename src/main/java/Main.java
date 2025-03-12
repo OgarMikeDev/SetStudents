@@ -1,17 +1,36 @@
-import java.util.HashSet;
-import java.util.TreeSet;
-
 public class Main {
     public static void main(String[] args) {
-        TreeSet<Student> setStudents = new TreeSet<>();
-        setStudents.add(new Student("Igor", 17, 89676400991l));
-        setStudents.add(new Student("Anton", 18, 89676400992l));
-        setStudents.add(new Student("Igor", 19, 89676400993l));
-        setStudents.add(new Student("Igor", 17, 89676400994l));
-        setStudents.add(new Student("Daniil", 17, 89676400994l));
-        setStudents.add(new Student("Maxim", 25, 89676400996l));
-        setStudents.add(new Student("Michail", 24, 89676400997l));
-        Student.printAllStudents();
-//        Student.removeStudent(89676400994l);
+        Student firstStudent = new Student(
+                "Уникум", 30,
+                "unikum.a.u@mail.ru", 896747029294l
+        );
+
+        Student secondStudent = new Student(
+                "Будка", 47,
+                "budka.a.u@mail.ru", 896747029294l
+        );
+
+        Student thirdStudent = new Student(
+                "Будка", 47,
+                "budka.a.u@mail.ru", 896747029294l
+        );
+
+        Student fourthStudent = new Student(
+                "Камаз", 63,
+                "kamaz.l.u@mail.ru", 896747029292l
+        );
+
+        Student fifthStudent = new Student(
+                "Камаз", 63,
+                "kamaz.l.u@mail.ru", 896747029292l
+        );
+
+        Student sixthStudent = new Student(
+                "Додик", 21,
+                "dodya.l.u@mail.ru", 896747029296l
+        );
+
+        Student.removeSelectedStudent(896747029292l);
+        Student.getListAllStudents();
     }
 }
